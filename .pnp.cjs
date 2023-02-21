@@ -40,7 +40,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.0.11"],\
           ["@vercel/og", "npm:0.1.0"],\
           ["@yarnpkg/pnpify", "npm:4.0.0-rc.39"],\
-          ["chrome-aws-lambda", "virtual:e444a29ea26a781e2fa310be70bdf744896eacb17a6c367c11ece9de06f74994b4af45ba5d5719616162fbf730820466fbcc0c67fa8b2f39feba4d9b37d0a2ec#npm:10.1.0"],\
+          ["chrome-aws-lambda", "virtual:e444a29ea26a781e2fa310be70bdf744896eacb17a6c367c11ece9de06f74994b4af45ba5d5719616162fbf730820466fbcc0c67fa8b2f39feba4d9b37d0a2ec#npm:6.0.0"],\
           ["convert-excel-to-json", "npm:1.7.0"],\
           ["date-fns", "npm:2.29.3"],\
           ["eslint", "npm:8.34.0"],\
@@ -3969,17 +3969,17 @@ const RAW_RUNTIME_STATE =
       }]\
     ]],\
     ["chrome-aws-lambda", [\
-      ["npm:10.1.0", {\
-        "packageLocation": "../../.yarn/berry/cache/chrome-aws-lambda-npm-10.1.0-859b927d1e-9.zip/node_modules/chrome-aws-lambda/",\
+      ["npm:6.0.0", {\
+        "packageLocation": "../../.yarn/berry/cache/chrome-aws-lambda-npm-6.0.0-8a139b9c81-9.zip/node_modules/chrome-aws-lambda/",\
         "packageDependencies": [\
-          ["chrome-aws-lambda", "npm:10.1.0"]\
+          ["chrome-aws-lambda", "npm:6.0.0"]\
         ],\
         "linkType": "SOFT"\
       }],\
-      ["virtual:e444a29ea26a781e2fa310be70bdf744896eacb17a6c367c11ece9de06f74994b4af45ba5d5719616162fbf730820466fbcc0c67fa8b2f39feba4d9b37d0a2ec#npm:10.1.0", {\
-        "packageLocation": "./.yarn/__virtual__/chrome-aws-lambda-virtual-0d928c6713/3/.yarn/berry/cache/chrome-aws-lambda-npm-10.1.0-859b927d1e-9.zip/node_modules/chrome-aws-lambda/",\
+      ["virtual:e444a29ea26a781e2fa310be70bdf744896eacb17a6c367c11ece9de06f74994b4af45ba5d5719616162fbf730820466fbcc0c67fa8b2f39feba4d9b37d0a2ec#npm:6.0.0", {\
+        "packageLocation": "./.yarn/__virtual__/chrome-aws-lambda-virtual-cc7829b84a/3/.yarn/berry/cache/chrome-aws-lambda-npm-6.0.0-8a139b9c81-9.zip/node_modules/chrome-aws-lambda/",\
         "packageDependencies": [\
-          ["chrome-aws-lambda", "virtual:e444a29ea26a781e2fa310be70bdf744896eacb17a6c367c11ece9de06f74994b4af45ba5d5719616162fbf730820466fbcc0c67fa8b2f39feba4d9b37d0a2ec#npm:10.1.0"],\
+          ["chrome-aws-lambda", "virtual:e444a29ea26a781e2fa310be70bdf744896eacb17a6c367c11ece9de06f74994b4af45ba5d5719616162fbf730820466fbcc0c67fa8b2f39feba4d9b37d0a2ec#npm:6.0.0"],\
           ["@types/puppeteer-core", null],\
           ["lambdafs", "npm:2.1.1"],\
           ["puppeteer-core", "virtual:e444a29ea26a781e2fa310be70bdf744896eacb17a6c367c11ece9de06f74994b4af45ba5d5719616162fbf730820466fbcc0c67fa8b2f39feba4d9b37d0a2ec#npm:19.7.2"]\
@@ -5133,7 +5133,7 @@ const RAW_RUNTIME_STATE =
           ["@types/react-dom", "npm:18.0.11"],\
           ["@vercel/og", "npm:0.1.0"],\
           ["@yarnpkg/pnpify", "npm:4.0.0-rc.39"],\
-          ["chrome-aws-lambda", "virtual:e444a29ea26a781e2fa310be70bdf744896eacb17a6c367c11ece9de06f74994b4af45ba5d5719616162fbf730820466fbcc0c67fa8b2f39feba4d9b37d0a2ec#npm:10.1.0"],\
+          ["chrome-aws-lambda", "virtual:e444a29ea26a781e2fa310be70bdf744896eacb17a6c367c11ece9de06f74994b4af45ba5d5719616162fbf730820466fbcc0c67fa8b2f39feba4d9b37d0a2ec#npm:6.0.0"],\
           ["convert-excel-to-json", "npm:1.7.0"],\
           ["date-fns", "npm:2.29.3"],\
           ["eslint", "npm:8.34.0"],\

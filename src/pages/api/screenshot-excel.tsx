@@ -87,11 +87,11 @@ export default async function screenshotExcelHandler(
   }
 
   const inspectHtml = false;
-  const imageType = "webp";
+  const imageType = "png";
   const envMode = process.env.NODE_ENV as EnvMode;
   const cacheControl = "max-age 3600, must-revalidate";
   const viewportWidth = 1240;
-  const viewportHeight = 1; // minimal value to take full page screenshot
+  const viewportHeight = 10; // minimal value to take full page screenshot
 
   const createBrowserEnvironment = pipe(
     getChromiumExecutable,

@@ -135,11 +135,11 @@ export default function Home() {
   );
 }
 
-const BACKEND_URL_DOMAIN = process.env.VERCEL_URL ?? "localhost:3000";
-const BACKEND_URL = BACKEND_URL_DOMAIN
-  ? `https://${BACKEND_URL_DOMAIN}`
-  : "http://localhost:3000";
+const PROTOCOL = !process.env.VERCEL_URL ? "http" : "https";
+const BACKEND_URL_DOMAIN = process.env.VERCEL_URL || "localhost:3000";
+const BACKEND_URL = `${PROTOCOL}://${BACKEND_URL_DOMAIN}`;
 
+console.log(BACKEND_URL);
 async function downloadScreenshot(file: File) {
   const formData = new FormData();
   formData.append("file", file);

@@ -2552,14 +2552,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chrome-aws-lambda@npm:^10.1.0":
-  version: 10.1.0
-  resolution: "chrome-aws-lambda@npm:10.1.0"
+"chrome-aws-lambda@npm:^6":
+  version: 6.0.0
+  resolution: "chrome-aws-lambda@npm:6.0.0"
   dependencies:
-    lambdafs: "npm:^2.0.3"
+    lambdafs: "npm:^2.0.2"
   peerDependencies:
-    puppeteer-core: ^10.1.0
-  checksum: 9206cbfa1410ee5fd47726a4bad6bca677867b69013194d84e1745d01fb4412bb1ab30f4ffc8e2d8454e858dff071dde4010886b41d1641d6842ac5a51bb4551
+    puppeteer-core: 6.0.x
+  checksum: 19221fda570c1e578dbc9ee37a6461e4a37268ce4b7565ae9eb653f827285abcc63d005247c03d7adc1c9add4202a37c93557552c46c31721ea6a421aa3008c5
   languageName: node
   linkType: hard
 
@@ -3463,7 +3463,7 @@ __metadata:
     "@types/react-dom": "npm:18.0.11"
     "@vercel/og": "npm:^0.1.0"
     "@yarnpkg/pnpify": "npm:^4.0.0-rc.39"
-    chrome-aws-lambda: "npm:^10.1.0"
+    chrome-aws-lambda: "npm:^6"
     convert-excel-to-json: "npm:^1.7.0"
     date-fns: "npm:^2.29.3"
     eslint: "npm:8.34.0"
@@ -4586,7 +4586,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lambdafs@npm:^2.0.3":
+"lambdafs@npm:^2.0.2":
   version: 2.1.1
   resolution: "lambdafs@npm:2.1.1"
   dependencies:

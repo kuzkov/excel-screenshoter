@@ -2,28 +2,35 @@ import styled from "@emotion/styled";
 
 function Table({ data }: any) {
   return (
-    <Wrapper>
-      <div>
-        <table>
-          <thead>
-            <tr>
-              <th>Дата</th>
-              <th>Назначение платежа</th>
-              <th>Сумма операции</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data?.slice(1)?.map((row: any, index: number) => (
-              <tr key={index}>
-                <td>{row.date}</td>
-                <td>{row.purpose}</td>
-                <td>{row.sum}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </Wrapper>
+    <html>
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
+      <body>
+        <Wrapper>
+          <div>
+            <table>
+              <thead>
+                <tr>
+                  <th>Дата</th>
+                  <th>Назначение платежа</th>
+                  <th>Сумма операции</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data?.slice(1)?.map((row: any, index: number) => (
+                  <tr key={index}>
+                    <td>{row.date}</td>
+                    <td>{row.purpose}</td>
+                    <td>{row.sum}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </Wrapper>
+      </body>
+    </html>
   );
 }
 
