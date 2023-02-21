@@ -14,9 +14,7 @@ import {
 import { FaFileUpload } from "react-icons/fa";
 import { useDropzone } from "react-dropzone";
 import { AiFillFileAdd, AiFillFile, AiOutlineDownload } from "react-icons/ai";
-import Table from "@/components/Table";
 import saveAs from "file-saver";
-import series from "async/series";
 
 const ACCEPTED_FILE_EXTENSION = ".xlsx";
 const ACCEPTED_FILE_TYPES = {

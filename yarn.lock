@@ -1724,13 +1724,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/async@npm:^3":
-  version: 3.2.18
-  resolution: "@types/async@npm:3.2.18"
-  checksum: 5b66635188dc3bb88b298b6ad24a5a2d890056d88105a40d2e6cabdb1de0474336e44629b920ea3c99f2c0eee9a4bbd2dc05400f9dd7893e5b48ae7cdd9ce4db
-  languageName: node
-  linkType: hard
-
 "@types/cacheable-request@npm:^6.0.1":
   version: 6.0.3
   resolution: "@types/cacheable-request@npm:6.0.3"
@@ -2330,13 +2323,6 @@ __metadata:
   version: 0.0.7
   resolution: "ast-types-flow@npm:0.0.7"
   checksum: f6f0fecb7cd2a31b964582e4a98c494e388041a6925e01e1a2d67a4c450e345d7dbd4ca9e6aaee493018ed03ecf23ce4456e4077b1a52c5c8eae35beb71111ae
-  languageName: node
-  linkType: hard
-
-"async@npm:^3.2.4":
-  version: 3.2.4
-  resolution: "async@npm:3.2.4"
-  checksum: 9719e38d24e9922c255ee9ae925fb668ef52243f9866a1b59e423a3bb6150a886b3c37287348ceefa09cd3f6fa1a29dcc770eeb70642acb13674363b2d5b2b21
   languageName: node
   linkType: hard
 
@@ -3467,7 +3453,6 @@ __metadata:
     "@emotion/react": "npm:^11.10.6"
     "@emotion/styled": "npm:^11.10.6"
     "@next/font": "npm:13.1.6"
-    "@types/async": "npm:^3"
     "@types/convert-excel-to-json": "npm:^1.7.1"
     "@types/file-saver": "npm:^2.0.5"
     "@types/formidable": "npm:^2.0.5"
@@ -3478,7 +3463,6 @@ __metadata:
     "@types/react-dom": "npm:18.0.11"
     "@vercel/og": "npm:^0.1.0"
     "@yarnpkg/pnpify": "npm:^4.0.0-rc.39"
-    async: "npm:^3.2.4"
     chrome-aws-lambda: "npm:^10.1.0"
     convert-excel-to-json: "npm:^1.7.0"
     date-fns: "npm:^2.29.3"
