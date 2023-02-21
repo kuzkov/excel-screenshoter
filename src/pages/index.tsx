@@ -136,7 +136,11 @@ export default function Home() {
     </Container>
   );
 }
-const BACKEND_URL = process.env.BACKEND_URL || "http://localhost:3000";
+
+const BACKEND_URL_DOMAIN = process.env.VERCEL_URL ?? "localhost:3000";
+const BACKEND_URL = BACKEND_URL_DOMAIN
+  ? `https://${BACKEND_URL_DOMAIN}`
+  : "http://localhost:3000";
 
 async function downloadScreenshot(file: File) {
   const formData = new FormData();
