@@ -98,12 +98,7 @@ export default async function screenshotExcelHandler(
     prepareWebPageFactory(
       { width: viewportWidth, height: viewportHeight },
       {
-        args: [
-          "--no-sandbox",
-          "--hide-scrollbars",
-          "--disable-web-security",
-          "--disable-setuid-sandbox",
-        ],
+        args: ["--hide-scrollbars", "--disable-web-security"],
       }
     ),
     createImageFactory({ inspectHtml, type: imageType, quality: 100 })
@@ -203,9 +198,11 @@ async function getChromiumOptions(
   } else {
     if (isLambda) {
       return {
-        args: chromeOptions?.args,
+        args: [...chrome.args, "--hide-scrollbars", "--disable-web-security"],
+        defaultViewport: chrome.defaultViewport,
         executablePath: await chrome.executablePath,
         headless: true,
+        ignoreHTTPSErrors: true,
       };
     } else {
       return {
