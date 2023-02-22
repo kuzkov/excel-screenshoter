@@ -5,6 +5,12 @@
 /.pnp
 .pnp.js
 
+#yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*
+
 # env
 .env
 
