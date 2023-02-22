@@ -66,6 +66,10 @@ export default function Home() {
     ? "Drop the files here ..."
     : "Drag & Drop .xlsx files here, or click to select files";
 
+  const downloadAll = () => {
+    files.map((uploadedFile) => uploadedFile.blob && saveAs(uploadedFile.blob));
+  };
+
   return (
     <Container variant="md" py={8} px={4}>
       <Stack spacing={8}>
@@ -129,18 +133,20 @@ export default function Home() {
               </Button>
             </HStack>
           ))}
+          {files.length !== 0 && (
+            <Button colorScheme="blue" width="full" onClick={downloadAll}>
+              Download all
+            </Button>
+          )}
         </Stack>
       </Stack>
     </Container>
   );
 }
 
-const PROTOCOL = !process.env.NEXT_PUBLIC_VERCEL_URL ? "http" : "https";
-const BACKEND_URL_DOMAIN =
-  process.env.NEXT_PUBLIC_VERCEL_URL || "localhost:3000";
-const BACKEND_URL = `${PROTOCOL}://${BACKEND_URL_DOMAIN}`;
+const BACKEND_URL =
+  process.env.NEXT_PUBLIC_BACKEND_URL || "http://localhost:8000";
 
-console.log(BACKEND_URL);
 async function downloadScreenshot(file: File) {
   const formData = new FormData();
   formData.append("file", file);

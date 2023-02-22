@@ -1,3 +1,4 @@
+import { css, Global } from "@emotion/react";
 import styled from "@emotion/styled";
 
 function Table({ data }: any) {
@@ -7,6 +8,15 @@ function Table({ data }: any) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body>
+        <Global
+          styles={css`
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
+            }
+          `}
+        />
         <Wrapper>
           <div>
             <table>
@@ -35,12 +45,6 @@ function Table({ data }: any) {
 }
 
 const Wrapper = styled.div`
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
   th {
     font-family: "TT Firs Neue";
     font-style: normal;
@@ -62,8 +66,8 @@ const Wrapper = styled.div`
     font-family: "TT Firs Neue";
     font-style: normal;
     font-weight: 400;
-    font-size: 18.1756px;
-    line-height: 108%;
+    font-size: 28px;
+    line-height: 36px;
     letter-spacing: -0.03em;
     color: #1b246c;
     text-shadow: 0px 4.42575px 22.1287px rgba(79, 38, 0, 0.25);
@@ -110,6 +114,7 @@ const Wrapper = styled.div`
   table {
     border-collapse: separate;
     border-spacing: 0 16px;
+    margin: -16px 0;
   }
 `;
 

@@ -1,7 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from "next";
 import core, { Page, Viewport } from "puppeteer-core";
-import chrome from "chrome-aws-lambda";
-import isLambda from "is-lambda";
 import os from "os";
 import { renderToStaticMarkup } from "react-dom/server";
 import Table from "@/components/Table";
@@ -90,7 +88,7 @@ export default async function screenshotExcelHandler(
   const imageType = "png";
   const envMode = process.env.NODE_ENV as EnvMode;
   const cacheControl = "max-age 3600, must-revalidate";
-  const viewportWidth = 1240;
+  const viewportWidth = 1140;
   const viewportHeight = 10; // minimal value to take full page screenshot
 
   const createBrowserEnvironment = pipe(
@@ -98,7 +96,12 @@ export default async function screenshotExcelHandler(
     prepareWebPageFactory(
       { width: viewportWidth, height: viewportHeight },
       {
-        args: ["--hide-scrollbars", "--disable-web-security"],
+        args: [
+          "--hide-scrollbars",
+          "--disable-web-security",
+          "--no-sandbox",
+          "--disable-setuid-sandbox",
+        ],
       }
     ),
     createImageFactory({ inspectHtml, type: imageType, quality: 100 })
@@ -195,23 +198,13 @@ async function getChromiumOptions(
       executablePath: chromeOptions?.executable ?? defaultExecutable,
       headless: true,
     };
-  } else {
-    if (isLambda) {
-      return {
-        args: [...chrome.args, "--hide-scrollbars", "--disable-web-security"],
-        defaultViewport: chrome.defaultViewport,
-        executablePath: await chrome.executablePath,
-        headless: true,
-        ignoreHTTPSErrors: true,
-      };
-    } else {
-      return {
-        args: chromeOptions?.args ?? [],
-        executablePath: chromeOptions?.executable ?? defaultExecutable,
-        headless: true,
-      };
-    }
   }
+
+  return {
+    args: chromeOptions?.args ?? [],
+    executablePath: chromeOptions?.executable ?? defaultExecutable,
+    headless: true,
+  };
 }
 
 function createImageFactory({
