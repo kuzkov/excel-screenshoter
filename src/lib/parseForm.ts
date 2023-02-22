@@ -11,13 +11,10 @@ export const parseForm = async (
   req: NextApiRequest
 ): Promise<{ fields: formidable.Fields; files: formidable.Files }> => {
   return new Promise(async (resolve, reject) => {
-    const uploadDir =
-      process.env.NODE_ENV === "production"
-        ? "/tmp"
-        : join(
-            process.env.ROOT_DIR || process.cwd(),
-            `/uploads/${dateFn.format(Date.now(), "dd-MM-Y")}`
-          );
+    const uploadDir = join(
+      process.env.ROOT_DIR || process.cwd(),
+      `/uploads/${dateFn.format(Date.now(), "dd-MM-Y")}`
+    );
 
     try {
       await stat(uploadDir);
