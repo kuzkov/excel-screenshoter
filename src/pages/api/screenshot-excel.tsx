@@ -203,9 +203,9 @@ async function getChromiumOptions(
   } else {
     if (isLambda) {
       return {
-        args: chrome.args,
+        args: chromeOptions?.args,
         executablePath: await chrome.executablePath,
-        headless: chrome.headless,
+        headless: true,
       };
     } else {
       return {
