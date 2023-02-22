@@ -6,7 +6,8 @@
 .pnp.js
 
 # data
-uploads
+uploads/*
+!uploads/.gitkeep
 
 # testing
 /coverage
