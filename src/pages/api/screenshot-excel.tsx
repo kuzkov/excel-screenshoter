@@ -95,7 +95,17 @@ export default async function screenshotExcelHandler(
 
   const createBrowserEnvironment = pipe(
     getChromiumExecutable,
-    prepareWebPageFactory({ width: viewportWidth, height: viewportHeight }, {}),
+    prepareWebPageFactory(
+      { width: viewportWidth, height: viewportHeight },
+      {
+        args: [
+          "--no-sandbox",
+          "--hide-scrollbars",
+          "--disable-web-security",
+          "--disable-setuid-sandbox",
+        ],
+      }
+    ),
     createImageFactory({ inspectHtml, type: imageType, quality: 100 })
   );
 
